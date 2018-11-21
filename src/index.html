@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Стоп-слова</title>
+	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+	<link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+</head>
+<body>
+	<div class="page">
+		<form action="">
+			<label for="mainText">Основной текст:</label>
+			<textarea name="mainText"></textarea>
+			<input type="submit" value="Проверить на стоп-слова">
+		</form>
+		<div class="result__block">
+			<h2 class="result__heading">Результат:</h2>
+			<div class="result"></div>
+		</div>
+
+	</div>
+	<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
