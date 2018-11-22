@@ -13,6 +13,7 @@ form.onsubmit = (e) => {
     // теперь добавим в конец нашего массива textArray слова "wow" и "jee", которых в текстах быть не может
     textArray.push('wow');
     textArray.push('jee');
+    textArray.push('kek');
     
 
     let resultArray = [];
@@ -23,9 +24,11 @@ form.onsubmit = (e) => {
         let word = textArray[i];
         let twoWords = textArray[i] + ' ' + textArray[i + 1];
         let threeWords = textArray[i] + ' ' + textArray[i + 1] + ' ' + textArray[i + 2];
+        let fourWords = textArray[i] + ' ' + textArray[i + 1] + ' ' + textArray[i + 2] + ' ' + textArray[i + 3];
         word = word.toLowerCase();
         twoWords = twoWords.toLowerCase();
         threeWords = threeWords.toLowerCase();
+        fourWords = fourWords.toLowerCase();
         if(stopWordsArray.indexOf(word) != -1) {
             resultArray.push(word);
         }
@@ -35,6 +38,9 @@ form.onsubmit = (e) => {
         if(stopWordsArray.indexOf(threeWords) != -1) {
             resultArray.push(threeWords);
         }				
+        if(stopWordsArray.indexOf(fourWords) != -1) {
+            resultArray.push(fourWords);
+        }
     }
 
     //console.log(resultArray);
